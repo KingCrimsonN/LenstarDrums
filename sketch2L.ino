@@ -77,7 +77,7 @@ void switches() {
   for (int i=0; i<Nswitch; i++){
     switchCState[i] = digitalRead(switchPins[i]);
     if (switchCState[i] != switchPState[i])
-      switchValue = switchCState[0] + switchCState[1] - 1; 
+      switchValue = switchCState[0]*2 + switchCState[1] - 1; 
     switchPState[i]=switchCState[i];
   }
 }
